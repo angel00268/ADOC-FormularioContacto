@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Envíanos un mensaje</h1>
+        <p>¡Estaremos contentos en darte una respuesta a tus preguntas! Llena el formulario de abajo con tus datos y contáctanos.</p>
+    </header>
+
+    <main>
+        <div id="container">
+            <div id="alert-danger" class="alert-danger">
+                <span>Error</span>
+                <p onclick="$('#alert-danger').hide()">x</p>
+            </div>
+            <div id="alert-success" class="alert-success">
+                <span>Error</span>
+                <p onclick="$('#alert-success').hide()">x</p>
+            </div>
+            <form id="frmContacto">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" class="form-control" name="name" id="name" required data-min="5" data-max="200">
+                    <span id="error_name" class="error_span"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email"  class="form-control" name="email" id="email" required data-type="email">
+                    <span id="error_email" class="error_span"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea name="message"  class="form-control" id="message" cols="20" rows="3" required data-min="10"></textarea>
+                    <span id="error_message" class="error_span"></span>
+                </div>
+                <button type="button" id="btnEnviar">
+                    Enviar
+                    <span class="loader" style="display: none;"></span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
